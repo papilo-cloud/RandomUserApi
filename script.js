@@ -16,7 +16,7 @@ document.addEventListener('readystatechange',()=>{
   if(document.readyState !== 'complete'){
      progress.style.visibility = 'visible'
      document.querySelector('body').style.visibility = 'hidden'
-   }else {
+   }else if(document.readyState === 'complete' ){
      progress.style.visibility = 'hidden'
      document.querySelector('body').style.visibility = 'visible'
    }
@@ -45,7 +45,6 @@ async function getUser(file) {
 // }
 
 text.innerHTML = `${results[0].name.first} ${results[0].name.last}`
-
 
 demo.innerHTML = msg[0]
 // text.innerHTML = `${results[0].name.first} ${results[0].name.last}`
