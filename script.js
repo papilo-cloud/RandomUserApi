@@ -12,7 +12,7 @@ var progress = document.getElementById('progress')
 // var container = document.getElementById('container')
 // var cont = document.getElementById('cont')
    
-document.addEventListener('readystatechange',()=>{
+document.addEventListener('readystatechange', function(){
   if(document.readyState !== 'complete'){
      progress.style.visibility = 'visible'
      document.querySelector('body').style.visibility = 'hidden'
