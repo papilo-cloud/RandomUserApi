@@ -11,8 +11,8 @@ var msg = ['Hi, My name is','My birthday is','My address is','My phone number is
 var progress = document.getElementById('progress')
 // var container = document.getElementById('container')
 // var cont = document.getElementById('cont')
-   document.querySelector('body').style.visibility
-document.addEventListener('readystatechange', function(){
+   document.querySelector('body').style.visibility = 'hidden'
+/* document.addEventListener('readystatechange', function(){
   if(document.readyState !== 'complete'){
      progress.style.visibility = 'visible'
      document.querySelector('body').style.visibility = 'hidden'
@@ -21,7 +21,7 @@ document.addEventListener('readystatechange', function(){
      document.querySelector('body').style.visibility = 'hidden'
    }
 })		
-
+*/
 
 // I tried to solve this but, could'nt find a better way.. So I resolve to repeating myself.
 getUser('https://randomuser.me/api?results=1')
