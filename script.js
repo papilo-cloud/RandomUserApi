@@ -11,14 +11,14 @@ var msg = ['Hi, My name is','My birthday is','My address is','My phone number is
 var progress = document.getElementById('progress')
 // var container = document.getElementById('container')
 // var cont = document.getElementById('cont')
-   
+   document.querySelector('body').style.visibility
 document.addEventListener('readystatechange', function(){
   if(document.readyState !== 'complete'){
      progress.style.visibility = 'visible'
      document.querySelector('body').style.visibility = 'hidden'
    }else if(document.readyState === 'complete' ){
      progress.style.visibility = 'hidden'
-     document.querySelector('body').style.visibility = 'visible'
+     document.querySelector('body').style.visibility = 'hidden'
    }
 })		
 
