@@ -7,40 +7,20 @@ var text = document.getElementById('text')
 // an Array for holding the text messages.
 var msg = ['Hi, My name is','My birthday is','My address is','My phone number is','My password is']
 
-// for (let i = 0; i < icon.length; i++) {
-//     icon[i].addEventListener('click', function () {
-//         var crnt = document.getElementsByClassName('active')[0]
-
-//         crnt.className = crnt.className.replace('active')
-//         this.className += ' active'
-//     })   
-// }
-
 //Animation for the preloading part.
 var progress = document.getElementById('progress')
-var container = document.getElementById('container')
-var cont = document.getElementById('cont')
+// var container = document.getElementById('container')
+// var cont = document.getElementById('cont')
    
-		function myAdd() {
-			progress.classList.remove('progress')
-			progress.style.display = 'none'
-		}	
-		setTimeout(myAdd,500);
-
-        var int;
-        var tme = 1  
-        window.onload = function () {
-           int = setInterval(add, 1)
-        } 
-        function add(){
-            tme++
-            container.style.opacity = 0
-            cont.style.opacity = 0
-            if (tme > 100) {
-                container.style.opacity = '1'
-                cont.style.opacity = '1'
-            }
-        };
+document.addEventListener('readystatechange',()=>{
+  if(document.readyState !== 'complete'){
+     progress.style.visibility = 'visible'
+     document.querySelector('body').style.visibility = 'hidden'
+   }else {
+     progress.style.visibility = 'hidden'
+     document.querySelector('body').style.visibility = 'visible'
+   }
+})		
 
 
 // I tried to solve this but, could'nt find a better way.. So I resolve to repeating myself.
