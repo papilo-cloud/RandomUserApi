@@ -11,12 +11,9 @@ var msg = ['Hi, My name is','My birthday is','My address is','My phone number is
 var progress = document.getElementById('progress')
 
 document.addEventListener('readystatechange', function(){
-  if(document.readyState !== 'complete'){
-     progress.style.visibility = 'visible'
-     document.querySelector('body').style.visibility = 'hidden'
-   }else if(document.readyState === 'complete' ){
+  if(document.readyState === 'complete'){
      progress.style.visibility = 'hidden'
-     document.querySelector('body').style.visibility = 'hidden'
+     document.querySelector('body').style.visibility = 'visible'
    }
 })		
 
