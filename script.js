@@ -9,12 +9,8 @@ var msg = ['Hi, My name is','My birthday is','My address is','My phone number is
 
 //Animation for the preloading part.
 var progress = document.getElementById('progress')
-// var container = document.getElementById('container')
-// var cont = document.getElementById('cont')
-   document.querySelector('body').style.visibility = 'hidden'
-   progress.style.visibility = 'visible'
 
-/* document.addEventListener('readystatechange', function(){
+document.addEventListener('readystatechange', function(){
   if(document.readyState !== 'complete'){
      progress.style.visibility = 'visible'
      document.querySelector('body').style.visibility = 'hidden'
@@ -23,7 +19,7 @@ var progress = document.getElementById('progress')
      document.querySelector('body').style.visibility = 'hidden'
    }
 })		
-*/
+
 
 // I tried to solve this but, could'nt find a better way.. So I resolve to repeating myself.
 getUser('https://randomuser.me/api?results=1')
